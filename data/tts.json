@@ -1,0 +1,26 @@
+{
+  "en-US": {
+    "say": {
+      "create": "Ok, I will remind you to: ",
+      "read": "Your reminders are : ",
+      "empty": "You don't have any reminder",
+      "delete": "Do you really want to delete your reminders ?",
+      "isok": "Your reminders has been deleted",
+      "isko": "Delete reminders has been cancelled",
+      "error_data_missing": "I don't know what to do",
+      "error_create_reminder_missing": "Could not detect the reminder to create"
+    }
+  },
+  "fr-FR": {
+    "say": {
+      "create": "D'accord, je vous rappellerais de : ",
+      "read": "Votre pense bête contient : ",
+      "empty": "Aucun pense bête créé.",
+      "delete": "Voulez-vous supprimer votre pense bête ?",
+      "isok": "Votre pense bête a bien été supprimé",
+      "isko": "La suppression de votr pense bête a été annulée.",
+      "error_data_missing": "Je ne sais pas quoi faire",
+      "error_create_reminder_missing": "Je ne détecte pas d'expression a créer."
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "linto-skill-memo": {
+    "label": {
+      "name": "Name",
+      "command": "Command - ",
+      "custom": "Custom",
+      "default": "Default"
+    },
+    "placeholder": {
+      "name": "Node name"
+    }
+  }
+}
