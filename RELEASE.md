@@ -1,3 +1,6 @@
+# 0.1.2
+- Fix Node HTML
+
 # 0.1.1
 - Fix jenkinsfile
 

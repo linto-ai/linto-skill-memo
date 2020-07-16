@@ -1,9 +1,16 @@
 {
   "name": "@linto-ai/node-red-linto-memo",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Linto skill that gives information about the flow current reminder",
   "author": "yhoupert@linagora.com",
   "license": "AGPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/linto-ai/linto-skill-memo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/linto-ai/linto-skill-memo/issues"
+  },
   "node-red": {
     "nodes": {
       "linto-skill-memo": "linto-skill-memo.js"
@@ -11,7 +18,7 @@
   },
   "dependencies": {
     "debug": "^4.1.1",
-    "@linto-ai/linto-components": "^0.0.1"
+    "@linto-ai/linto-components": "^0.0.5"
   },
   "homepage": "https://linto.ai/",
   "directories": {
