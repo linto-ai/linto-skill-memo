@@ -44,7 +44,7 @@ function memoCreate(tts, msg) {
 
     let reminder_entity = this.payloadAction.extractEntityFromName(msg.payload, 'expression')
     if (reminder_entity === undefined) {
-      return tts.say.error_create_reminder_missing
+      return { say: tts.say.error_create_reminder_missing }
     }
 
     let reminder = reminder_entity.value
@@ -54,7 +54,7 @@ function memoCreate(tts, msg) {
       text: `${tts.say.create.text}${reminder}`
     }
   }
-  return tts.say.error_create_reminder_missing
+  return { say: tts.say.error_create_reminder_missing }
 }
 
 function memoDeleteClean(tts) {
