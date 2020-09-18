@@ -23,33 +23,27 @@
 
 ##intent|memo|fr
 - [supprime](action_delete) mes notes
-- [supprime](action_delete) moi mes mémos
+- [supprime](action_delete) mes mémos
 - [purge](action_delete) mon pense-bête
-- [purger](action_delete) mes pense-bêtes
-- [ôte](action_delete) mes pense-bêtes
+- [purge](action_delete) mes pense-bêtes
+- [supprime](action_delete) mes pense-bêtes
 - peux-tu [supprimer](action_delete) mon pense-bête
 - peux-tu [supprimer](action_delete) mes pense-bêtes
 - [supprime](action_delete) mon pense-bête
-- [purge](action_delete) mes pense-bêtes
-- [ôte](action_delete) le mémo
 - [supprime](action_delete) ma dernière note
 - [énumère](action_list) mes mémos
-- [enumère](action_list) moi mes mémos
 - [lis](action_list) mon pense-bête
 - [affiche](action_list) mes pense-bêtes
-- donne la [liste](action_list) de mes mémos
+- donne-moi la [liste](action_list) de mes mémos
 - [affiche](action_list) toutes mes notes
 - [affiche](action_list) tous mes mémos
-- [crée](action_create) un mémo [pour allez voir Maudet](expression)
+- [crée](action_create) un mémo [allez voir Maudet](expression)
 - [fais-moi penser](action_create) qu'il [faut que j'appelle Sonia](expression)
-- [rappelle](action_create) moi de [prendre un rendez-vous avec Bruno](expression)
-- peux-tu me [rappeler](action_create) de [manger demain soir au restaurant](expression)
-- peux-tu me [rappeler](action_create) moi [du tournois de tennis sous peu](expression)
-- je [dois](action_create) [envoyer un mail](expression)
+- [rappelle-moi](action_create) de [prendre un rendez-vous avec Bruno](expression)
 - [note](action_create) de [rencontrer Zapolsky](expression)
 - [pense-bête](action_create) [allez au cinéma](expression)
 - [note](action_create) que [j'ai un tournoi](expression)
-- [créer](action_create) le mémo [pour aller à Disneyland](expression)
+- [crée](action_create) le mémo [aller à Disneyland](expression)
 - [crée](action_create) un mémo [pour énumérer les étapes importantes de la plénière](expression)
 - [ok](isok)
 - [oui](isok)
