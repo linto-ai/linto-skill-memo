@@ -1,18 +1,21 @@
 ##intent|memo|en
-- let [print](action_list) my reminders
-- [display](action_list) my reminders
+- [print](action_list) my reminders
+- could you please [display](action_list) my reminders
 - can you [list](action_list) my reminders
 - please [read](action_list) my reminders
 - [purge](action_delete) my reminders please
-- [drop](action_delete) my reminders
-- could you [remove](action_delete) my reminders
-- let [remove](action_delete) my reminders
-- can you [drop](action_delete) my reminders
 - [reset](action_delete) my reminders
-- [i have](action_create) to [do something](expression)
+- [delete](action_delete) my reminders
+- please [remove](action_delete) my reminders
+- could you please [remove](action_delete) my reminders
+- can you [drop](action_delete) my reminders please
 - [note](action_create) [send document to Leeroy jenkins ](expression) in my reminders please
 - [reminders](action_create) [call the hotel to change the room](expression)
 - [remind](action_create) me to [call david](expression)
+- add a [reminder](action_create) to [call david](expression)
+- add a [reminder](action_create) that I [have to call david](expression)
+- add a [note](action_create) that I [have to call david](expression)
+- add a [note](action_create) to [call david](expression)
 - [note](action_create) [send an email to bruno about documents](expression) in my reminders please
 - [remind me](action_create) to [send an email To david spencer about documents](expression)
 - can you [remind](action_create) me to [call david](expression)
@@ -30,7 +33,7 @@
 - peux-tu [supprimer](action_delete) mon pense-bête
 - peux-tu [supprimer](action_delete) mes pense-bêtes
 - [supprime](action_delete) mon pense-bête
-- [supprime](action_delete) ma dernière note
+- [purge](action_delete) ma dernière note
 - [énumère](action_list) mes mémos
 - [lis](action_list) mon pense-bête
 - [affiche](action_list) mes pense-bêtes
@@ -41,10 +44,11 @@
 - [fais-moi penser](action_create) qu'il [faut que j'appelle Sonia](expression)
 - [rappelle-moi](action_create) de [prendre un rendez-vous avec Bruno](expression)
 - [note](action_create) de [rencontrer Zapolsky](expression)
-- [pense-bête](action_create) [allez au cinéma](expression)
+- [crée](action_create) pense-bête [allez au cinéma](expression)
 - [note](action_create) que [j'ai un tournoi](expression)
 - [crée](action_create) le mémo [aller à Disneyland](expression)
 - [crée](action_create) un mémo [pour énumérer les étapes importantes de la plénière](expression)
 - [ok](isok)
 - [oui](isok)
 - [non](isko)
+- [annuler](isko)
