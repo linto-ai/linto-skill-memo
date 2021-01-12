@@ -20,35 +20,41 @@ module.exports = function (msg) {
     }
     return { say: tts.say.error_data_missing }
   } else {
-    let extractedEntitie = this.payloadAction.extractEntityFromName(msg.payload, 'action_delete')
-    if (!extractedEntitie) {
-
-      if (this.payloadAction.extractEntityFromName(msg.payload, 'isok')) {
-        return { say: memoDeleteClean.call(this, tts) }
-      } else if (this.payloadAction.extractEntityFromName(msg.payload, 'isko')) {
-        return { say: tts.say.isko }
-      }
-
+    if (this.payloadAction.checkEntitiesRequire(msg.payload, ['isok'])) {
+      return { say: memoDeleteClean.call(this, tts) }
+    } else if (this.payloadAction.checkEntitiesRequire(msg.payload, ['isko'])) {
+      return { say: tts.say.isko }
     }
+    return { say: tts.say.error_delete }
   }
-  return { say: `${tts.say.date} ${new Date().toISOString().split('T')[0]}` }
 }
 
 function memoList(tts) {
   if (this.getFlowConfig(MEMO_KEY).length > 0) {
-    return `${tts.say.read}${this.getFlowConfig(MEMO_KEY)}`
+    return {
+      phonetic: `${tts.say.read.phonetic}${this.getFlowConfig(MEMO_KEY)}`,
+      text: `${tts.say.read.text}${this.getFlowConfig(MEMO_KEY)}`
+    }
   }
   return tts.say.empty
 }
 
 function memoCreate(tts, msg) {
   if (this.payloadAction.checkEntitiesRequire(msg.payload, ['action_create', 'expression'])) {
-    debug('I SHOULD CREATE')
-    let reminder = this.payloadAction.extractEntityFromName(msg.payload, 'expression').value
+
+    let reminder_entity = this.payloadAction.extractEntityFromName(msg.payload, 'expression')
+    if (reminder_entity === undefined) {
+      return { say: tts.say.error_create_reminder_missing }
+    }
+
+    let reminder = reminder_entity.value
     this.getFlowConfig(MEMO_KEY).push(reminder)
-    return `${tts.say.create}${reminder}`
+    return {
+      phonetic: `${tts.say.create.phonetic}${reminder}`,
+      text: `${tts.say.create.text}${reminder}`
+    }
   }
-  return tts.say.error_create_reminder_missing
+  return { say: tts.say.error_create_reminder_missing }
 }
 
 function memoDeleteClean(tts) {
